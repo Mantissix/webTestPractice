@@ -33,8 +33,13 @@ class TestDemo:
 
 # 复用浏览器
 class TestWework:
-
+    # 通过复用浏览器，获取cookie并保存
     def test_weWork(self):
+        # 关于ChromeOptions的作用，在自动化测试过程中，通过代码对Chrome浏览器进行一些初始化设置，以便浏览器完成我们期望的行为
+        # 1、设置chrome文件为值（binary_location）
+        # 2、添加启动配置（arguments）
+        # 3、添加插件（add_extension)
+        # 4、添加设置参数（add_experimental_options）
         opt = webdriver.ChromeOptions()
         # 设置debugg地址
         opt.debugger_address = "127.0.0.1:9222"
